@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+.swiper-pagination-bullet {
+    background-color: #d1d5db;
+
+    opacity: 1;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: #16a34a;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #16a34a !important;
+
+}
