@@ -2,7 +2,7 @@
 
 New York Pines is a React-based web application that replicates the core functionality and layout of the New York Times homepage. It leverages the official New York Times API to fetch high-quality news content and display it with a modern, responsive, and accessible interface.
 
-This project was developed as part of the Start2Impact Front-End Development path.
+This project was developed as part of the [**Start2Impact**](https://www.start2impact.it/) Front-End Development path.
 
 ## 🔍 Features
 
