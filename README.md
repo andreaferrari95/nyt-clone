@@ -1,4 +1,4 @@
-# 📰 New York Pines — A New York Times Clone
+# [📰 New York Pines](https://newyorkpines.netlify.app/) — A New York Times Clone
 
 New York Pines is a React-based web application that replicates the core functionality and layout of the New York Times homepage. It leverages the official New York Times API to fetch high-quality news content and display it with a modern, responsive, and accessible interface.
 
