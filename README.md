@@ -1,120 +1,118 @@
-# New York Pines (NYT Clone)
+# 📰 New York Pines — A New York Times Clone
 
-New York Pines is a React-based web application that replicates the functionality of a news website, leveraging the New York Times API to fetch and display the latest news articles. The app is built with modern web technologies, including TypeScript, Vite, TailwindCSS, and Redux Toolkit, to ensure a fast, responsive, and maintainable user experience.
+New York Pines is a React-based web application that replicates the core functionality and layout of the New York Times homepage. It leverages the official New York Times API to fetch high-quality news content and display it with a modern, responsive, and accessible interface.
 
-## Features
+This project was developed as part of the Start2Impact Front-End Development path.
 
-- **Dynamic News Sections**: Browse news articles by categories such as World, Technology, Health, Sports, and more.
-- **Trending Articles**: View the most popular articles using the New York Times "Most Viewed" API.
-- **Search Functionality**: Search for articles by keywords with real-time filtering and debouncing.
-- **Hero Slider**: A visually appealing slider showcasing the top three trending articles.
-- **Responsive Design**: Fully responsive layout optimized for both desktop and mobile devices.
-- **Scroll to Top**: A floating button for easy navigation back to the top of the page.
-- **SEO Optimization**: Meta tags dynamically set for each page using `react-helmet`.
+## 🔍 Features
 
-## Tech Stack
+- ✅ **Homepage Clone**: A structured, responsive homepage inspired by the layout and flow of nytimes.com.
+- ✅ **News Sections**: Browse articles from multiple NYT sections like World, Technology, Health, Sports, and more.
+- ✅ **Trending Slider**: A hero slider at the top highlights the 3 most popular articles.
+- ✅ **Search**: Keyword-based article search with debounced input.
+- ✅ **Load More**: Paginated loading with animated entry of news cards.
+- ✅ **Responsive Layout**: Fully optimized for mobile, tablet, and desktop.
+- ✅ **SEO Optimization**: Dynamic page titles via `react-helmet`.
+- ✅ **Scroll-to-Top button**.
+- ✅ **Share Button**: Easily share articles with the Web Share API or copy links.
+- ✅ **404 Page**: Friendly "Page Not Found" fallback with return navigation.
 
-- **React + TypeScript**: For building a scalable and type-safe UI.
-- **Vite**: For fast development and optimized builds.
-- **TailwindCSS**: For styling with utility-first CSS.
-- **Redux Toolkit**: For state management, including fetching and storing news articles.
-- **Framer Motion**: For smooth animations and transitions.
-- **Axios**: For making API requests to the New York Times API.
-- **React Router**: For client-side routing.
+## 💡 Bonus Features
 
-## Project Structure
+- ✅ **Framer Motion** for animations (card entry, transitions, button effects).
+- ✅ **Social Footer** with GitHub and LinkedIn.
+- ✅ **Hamburger Menu** for mobile navigation.
+- ✅ Smooth UX with hover previews, loading skeletons, tooltips, etc.
+- ✅ Lazy Loading of images for performance.
 
-The project follows a modular structure for better maintainability:
+## 🛠 Tech Stack
+
+| Tool               | Role                      |
+| ------------------ | ------------------------- |
+| React + TypeScript | Frontend UI development   |
+| Vite               | Blazing-fast build tool   |
+| TailwindCSS (v4)   | Utility-first styling     |
+| Redux Toolkit      | Global state management   |
+| Axios              | Fetching NYT API data     |
+| React Router       | Client-side routing       |
+| Framer Motion      | Animations & transitions  |
+| react-helmet       | SEO & meta tag management |
+
+## 📁 Project Structure
 
 ```
 nyt-clone/
-├── public/                # Static assets
+├── public/                # Static files
 ├── src/
-│   ├── components/        # Reusable UI components (e.g., Navbar, Footer, HeroSlider)
-│   ├── constants/         # Static data (e.g., news sections)
-│   ├── pages/             # Page components (e.g., HomePage, SearchPage, NotFound)
-│   ├── routes/            # App routing configuration
-│   ├── store/             # Redux store and slices
-│   ├── types/             # TypeScript type definitions
-│   ├── App.tsx            # Main app component
-│   ├── main.tsx           # Entry point
+│   ├── components/        # Reusable components (Navbar, Footer, HeroSlider, etc.)
+│   ├── constants/         # Static data (sections, etc.)
+│   ├── pages/             # Home, Search, 404
+│   ├── store/             # Redux store & slices
+│   ├── types/             # TypeScript types
+│   ├── App.tsx            # App entry
+│   ├── main.tsx           # Root render
 │   └── index.css          # Global styles
-├── .env                   # Environment variables (e.g., NYT API key)
-├── package.json           # Project dependencies and scripts
-├── tailwind.config.js     # TailwindCSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── vite.config.ts         # Vite configuration
+├── .env                   # API keys (NYT) *not in repository
+├── tailwind.config.js     # Tailwind setup
+├── vite.config.ts         # Vite config
+└── package.json           # Dependencies & scripts
 ```
 
-## Installation and Setup
+## 🚀 Getting Started
 
-1. Clone the repository:
+1. **Clone the Repository**:
 
-   ```sh
-   git clone https://github.com/your-username/nyt-clone.git
-   cd nyt-clone
+   ```bash
+   git clone https://github.com/andreaferrari95/nyt-clone.git
    ```
 
-2. Install dependencies:
+2. **Install Dependencies**:
 
-   ```sh
+   ```bash
    npm install
    ```
 
-3. Set up the environment variables:
+3. **Setup Environment Variables**:
 
-   - Create a `.env` file in the root directory.
-   - Add your New York Times API key:
-     ```
-     VITE_NYT_API_KEY=your_api_key_here
-     ```
+   Create a `.env` file and add your NYT API key:
 
-4. Start the development server:
+   ```ini
+   VITE_NYT_API_KEY=your_api_key_here
+   ```
 
-   ```sh
+4. **Run the Dev Server**:
+
+   ```bash
    npm run dev
    ```
 
-5. Open the app in your browser at `http://localhost:5173`.
+   Access the app at `http://localhost:5173`.
 
-## Scripts
+## 📦 Scripts
 
-- `npm run dev`: Start the development server.
-- `npm run build`: Build the app for production.
-- `npm run preview`: Preview the production build.
-- `npm run lint`: Run ESLint to check for code quality issues.
+- `npm run dev` — Start local dev server
+- `npm run build` — Production build
+- `npm run preview` — Preview built app
+- `npm run lint` — Run ESLint checks
 
-## ESLint Configuration
+## 🔍 NYT API Integration
 
-The project uses ESLint with TypeScript and React-specific rules. To enable type-aware linting, you can expand the configuration as follows:
+Using these endpoints:
 
-```js
-export default tseslint.config({
-  extends: [
-    ...tseslint.configs.recommendedTypeChecked,
-    ...tseslint.configs.strictTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+- 🔸 **Top Stories API** — by section (e.g., world, technology, etc.)
+- 🔸 **Most Popular API** — top trending articles
 
-## API Integration
+More info: [NYT Developer Docs](https://developer.nytimes.com/).
 
-The app integrates with the New York Times API to fetch news articles. It uses the following endpoints:
+## 📣 Credits
 
-- **Top Stories API**: Fetches articles by section (e.g., World, Technology).
-- **Most Viewed API**: Fetches trending articles.
+Developed by Andrea Ferrari as part of the Start2Impact curriculum.
 
-## Contributing
+Special thanks to:
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve the app.
+- 📰 New York Times API
+- 💻 Open source libraries and tools
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License.
+MIT — free to use, fork, and build upon.
