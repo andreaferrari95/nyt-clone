@@ -18,7 +18,7 @@ const NewsCard = ({ article }: Props) => {
   const image =
     article.multimedia?.[0]?.url ||
     article.media?.[0]?.["media-metadata"]?.[2]?.url ||
-    "/fallback.jpg";
+    "/Fallback/NYP.png";
 
   const handleShare = () => {
     if (navigator.share) {
